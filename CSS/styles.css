@@ -37,3 +37,7 @@ body{
 .navbar-dark{
     background-color: #512DA8;
 }
+
+#btnReserveTable{
+    margin-left: 58px;
+}
