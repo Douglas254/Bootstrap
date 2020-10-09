@@ -30,13 +30,13 @@
                         <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                     </ul>
                     <span class="navbar-text">
-                        <a data-toggle="modal" data-target="#loginModal"><span class="fa fa-sign-in"></span> Login</a>
+                        <a href="#loginBtn"><span class="fa fa-sign-in"></span> Login</a>
                     </span>
                 </div>
             </div>
         </nav>
 
-        <div id="loginModal" class="modal fade" role="dialog">
+        <div id="loginFormModal" class="modal fade" role="dialog">
             <div class="modal-dialog modal-lg" role="content">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -74,7 +74,7 @@
             </div>
         </div>
 
-        <div id="Reserveform" class="modal fade" role="dialog">
+        <div id="ReserveFormModal" class="modal fade" role="dialog">
             <div class="modal-dialog modal-lg" role="content">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -159,7 +159,7 @@
                         <img src="img/logo.png" class="img-fluid">
                     </div>
                     <div class="col-12 col-sm align-self-center">
-                        <a class="btn btn-block btn-sm nav-link btn-warning" data-toggle="modal" data-target="#Reserveform" >Reserve Table</a>
+                        <button type="button" class="btn btn-block btn-sm nav-link btn-warning" id="ReserveBtn" >Reserve Table</button>
                     </div>
                 </div>
             </div>
@@ -305,6 +305,26 @@
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+       <!--Reserve table javascript code using button-->
+       <script>
+            $(document).ready(function(){
+              $("#ReserveBtn").click(function(){
+                $("#ReserveFormModal").modal();
+              });
+            });
+        </script>
+
+        <!--Login javascript code using link-->
+        <script>
+            $(document).ready(function(){
+              $('a[href$="#loginBtn"]').on( "click", function() {
+                $('#loginFormModal').modal('show');
+              });
+            });
+        </script>    
+
+        <!--Carousel Bootstrap and JQuery-->
         <script>
             $(document).ready(function(){
                 $('#mycarousel').carousel({ interval: 2000 });
