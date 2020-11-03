@@ -14,7 +14,9 @@
   "devDependencies": {
     "http-proxy-middleware": "^1.0.5",
     "lite-server": "^2.3.0",
-    "node-sass": "^4.14.1"
+    "node-sass": "^4.14.1",
+    "onchange": "^3.3.0",
+    "parallelshell": "^3.0.2"
   },
   "dependencies": {
     "bootstrap": "^4.0.0",
